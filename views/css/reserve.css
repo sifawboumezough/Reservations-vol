@@ -1,0 +1,39 @@
+body{
+    height: 100vh;
+    /* background-image: url('views/images/bg1.png'); */
+    /* background-image: url('views/images/background-login.jpg'); */
+    background-image: url('../images/reservebck.png');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: repeat-y;
+  }
+  
+  .card{
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  } 
+  
+  
+  /* .card-body{
+    padding: 2rem;
+  } */
+/*  */
+
+
+  
+ 
+
+
+  
+
+  
+ 
