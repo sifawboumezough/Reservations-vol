@@ -81,11 +81,11 @@
 							<form  method="post" action="book">
 								<div class="form-group">
 									<span class="form-label" id="formgroup">Depart City</span>
-									<input class="form-control" type="text" name="from" placeholder="From :">
+									<input class="form-control" type="text" name="depart_city" placeholder="From :">
 								</div>
                 <div class="form-group">
 									<span class="form-label" id="formgroup">Arrival City</span>
-									<input class="form-control" type="text" name="to" placeholder="To :">
+									<input class="form-control" type="text" name="arrival_city" placeholder="arrival_city :">
 								</div>
                                 <div style="display: flex; gap: 5%"> 
                                     <input type="radio" checked id="Vol1" name="Vol1" value="One Way">

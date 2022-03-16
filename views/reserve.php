@@ -1,20 +1,23 @@
+<?php
+    if(isset($_POST['submit'])){
+        $newFlight= new ReservationsController();
+        $newFlight->add();
+        
+    }
+?>
 
 <?php
     if(isset($_POST['id'])){
         $existFlight= new flightController();
         $flight = $existFlight->getOneFlight();
-    }
-    $id = $_SESSION['id'];
-    $passengers=$_POST['passengers'];
-     
 
-?>
-<?php
-    // if(isset($_POST['submit'])){
-    //     $newFlight= new ReservationsController();
-    //     $newFlight->add();
-        
-    // }
+
+      $id = $_SESSION['id'];
+      $passengers = $_POST['passengers'];
+    }
+  
+    // echo "number of psg : " .$passengers . '<br/>';
+
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +41,12 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="./home">Home</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./myreservation">MyReservation</a>
+            
+          </li>
+   
         </ul>
       </div>
     </div>
@@ -45,7 +54,7 @@
 
 
 
-<form method="POST"  >
+<form method="POST">
       <?php
       $counter=1;
       while($counter<=$passengers) { ?>
@@ -66,10 +75,10 @@
 </div>
 <div class="form-group col-md-6">
 <label for="lastname">Last Name:</label>
-<input type="text" class="form-control"  name="firstname[]" placeholder="first name here" >
+<input type="text" class="form-control"  name="lastname[]" placeholder="first name here" >
 </div>
 <div class="form-group col-md-6">
-<label for="flightTime">Email:</label>
+<label for="email">Email:</label>
 <input type="text" class="form-control" name="email[]" placeholder="Email here" >
 </div>
 </div>
@@ -79,23 +88,21 @@
 </div>
 <div class="form-row">
 <div class="form-group col-md-6">
-    <input type="text" hidden  name="airlines[]" value="<?php echo $flight->airlines; ?>" >
+    <input type="text"   name="airlines[]" value="<?php echo $flight->airlines; ?>" >
 </div>
 <div class="form-group col-md-6">
-    <input type="text" hidden  name="flight_no[]" value="<?php echo $flight->flight_no; ?>" >
+    <input type="text"   name="flight_no[]" value="<?php echo $flight->flight_no; ?>" >
 </div>
 
 <div class="form-group col-md-6">
-    <input type="text" hidden  name="from[]" value="<?php echo $flight->from; ?>" >
+    <input type="text"   name="depart_city[]" value="<?php echo $flight->depart_city; ?>" >
 </div>
 <div class="form-group col-md-6">
-    <input type="text" hidden  name="to[]" value="<?php echo $flight->to; ?>" >
+    <input type="text"   name="arrival_city[]" value="<?php echo $flight->arrival_city; ?>" >
 </div>
 
   <div class="form-group col-md-6">
-
-    <input type="date" hidden  name="departure[]" value="<?php echo $flight->departure; ?>" >
-    <input type="hidden" name=departure[]" value="<?php echo $flight->id; ?>">
+    <input type="date" name="departure[]" value="<?php echo $flight->departure; ?>">
 
   </div>
 <div class="form-group col-md-6">
@@ -112,8 +119,9 @@
 
 <div class="form-row">
 <div class="form-group col-md-6">
-<input class="form-control" hidden type="number" name="counter" id="" value="<?php echo $passengers?>" >
-<input class="form-control" hidden type="number" name="Price[]" id="" value="<?php echo $flight->Price; ?>" >
+<input class="form-control"  type="text" name="Price[]"  value="<?php echo $flight->price; ?>">
+<input class="form-control"  type="text" name="counter"  value="<?php echo $passengers; ?>" >
+
 </div>
 </div>
 
@@ -125,7 +133,7 @@
 </div>
 
 <?php
-$counter=$counter+1;
+$counter++;
  }
 
 ?>

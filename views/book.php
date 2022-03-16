@@ -16,10 +16,20 @@
 		$flights = $flght->findFlights();
     
     $departure =  $_POST['departure'];
-    $from=  $_POST['from'];
-    $to=  $_POST['to'];
+    $depart_city=  $_POST['depart_city'];
+    $arrival_city=  $_POST['arrival_city'];
     
 	}
+?>
+
+<?php
+    // if(isset($_POST['submit'])){
+    //     $newFlight= new ReservationsController();
+    //     $newFlight->add();
+    //     // $passengers=$_POST['passengers'];
+
+        
+    // }
 ?>
 <!doctype html>
 <html lang="en">
@@ -130,8 +140,8 @@
 		<tr>
                         <th><?php echo $flight['airlines']; ?> </th>
                         <th><?php echo $flight['flight_no']; ?> </th>
-                        <th><?php echo $flight['from']; ?> </th>
-                        <th><?php echo $flight['to']; ?> </th>
+                        <th><?php echo $flight['depart_city']; ?> </th>
+                        <th><?php echo $flight['arrival_city']; ?> </th>
                         <th><?php echo $flight['departure']; ?> </th>
                         <th><?php echo $flight['return']; ?> </th>
                         <th><?php echo $flight['departure_time']; ?> </th>
@@ -146,7 +156,7 @@
                             <td><input type="hidden" name="id" value="<?php echo $flight['id'] ?>">
                             <td>Passengers<input type="number" name="passengers" value="1"></td>
 
-                              <button type="submit" name="submit"class="btn btn-sm btn-success" >Reserve Now</button></td>
+                              <button type="submit" name="reserve" class="btn btn-sm btn-success" >Reserve Now</button></td>
                         </form>                                        
                              </td>
 		</tr>
