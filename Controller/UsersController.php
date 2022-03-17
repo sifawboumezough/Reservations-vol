@@ -33,18 +33,17 @@ class UsersController {
                 $data['fullname'] = $_POST['fullname'];
                 $result= User::login($data);
                 if($result->fullname === $_POST['fullname'] && password_verify($_POST['password'], $result->password)) {
-                    // $_SESSION['logged'] = true;
+                    $_SESSION['logged'] = true;
                     $_SESSION['fullname'] = $result->fullname;  
                     $_SESSION['id'] = $result->id ;
                         Redirect::to('home');
-
                 } else {
                     Session::set('success', 'Your username or password may be incorrect');
                     Redirect::to('login');
                 }
             }
         }
-
+        
         static public function logout(){
             session_destroy();
         }

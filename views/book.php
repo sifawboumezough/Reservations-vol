@@ -11,6 +11,7 @@
  
 
 <?php 
+
 	if(isset($_POST['search'])){
 		$flght = new FlightController();
 		$flights = $flght->findFlights();

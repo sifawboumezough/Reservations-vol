@@ -1,10 +1,8 @@
 <?php
+    include('./views/includes/alerts.php');
     require_once './autoload.php';
-    // include('./views/includes/alerts.php');
-    require_once './Controller/UsersController.php';
     require_once './Controller/HomeController.php';
-    require_once './Controller/ReservationsController.php'; 
-
+    require_once 'Database/DB.php';
 
 
     $home = new HomeController();
@@ -24,5 +22,7 @@
         $home->index('home');
     }
 
-    
+
+
 ?>
+    

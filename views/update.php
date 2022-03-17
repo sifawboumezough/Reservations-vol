@@ -7,12 +7,10 @@
     }
     if(isset($_POST['submit'])){
         $existFlight = new FlightController();
-        $existFlight->updateFlight();   
-         
+        $existFlight->updateFlight();         
     }
-   
+    
 ?>
-
 
 <!DOCTYPE html>
 <html>

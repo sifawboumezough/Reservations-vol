@@ -42,7 +42,7 @@
 </head>
 <body>
 <div class="container" style="position: relative; margin-top: 5%;">
-<h1 style=" text-align: center; color:white ; font-weight: 100;">Flight Management</h1>
+<h1 style=" text-align: center; color:#000 ; font-weight: 100;">Flight Management</h1>
 	<div class="row my-20">
 		<div class="col-md-20 mx-auto">
 			<?php include('./views/includes/alerts.php');?>

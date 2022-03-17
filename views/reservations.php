@@ -6,7 +6,7 @@
         if(isset($_POST['find'])){
         $data= new ReservationsController();
         $reservations=$data->FindUserReservation();
-}
+        }
 ?>
 
 
@@ -50,7 +50,6 @@
 </head>
 <body>
 <div class="container" style="position:relative; margin-left:-4%; margin-top:5%;">
-<h1 style=" text-align: center; color:white ; font-weight: 100;">Flight Management</h1>
 	<div class="row my-4">
 		<div class="col-md-10 mx-auto">
 			<?php include('./views/includes/alerts.php');?>

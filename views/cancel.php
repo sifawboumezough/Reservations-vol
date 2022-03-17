@@ -1,7 +1,8 @@
 <?php
   if(isset($_POST['id'])){
-    $existReservation= new ReservationsController();
-    $existReservation->cancelReservation();
- }
+    $existReservation= new flightController();
+    $existReservation->cancelFlight();
+  }
+
 
 ?>

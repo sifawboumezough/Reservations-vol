@@ -10,7 +10,7 @@ class AdminsController{
             if($result->email===$_POST['email'] && $result->password===$_POST['password']) {
                    $_SESSION['admin'] = true ;
                    $_SESSION['email'] = $result->email;
-                //    $_SESSION['id'] = $result->id;
+                   $_SESSION['id'] = $result->id;
                     Redirect::to('admin');
 
             } else {

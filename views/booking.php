@@ -1,11 +1,11 @@
 <?php
-      if(isset($_POST['search'])){
-        $flght = new FlightController();
-        $flights = $flght->findFlights();
-	}else{
-		$flght = new FlightController();
-		$flights = $flght->getAllFlights();
-	}
+ if(isset($_POST['find'])){
+    $flightobj= new flightController();
+    $flights=$flightobj->adminfindFlights();
+}else{
+    $flightobj= new flightController();
+    $flights=$flightobj->getAllFlights();
+}
         // print_r($employes);
  ?>
 
@@ -116,18 +116,6 @@
 												<option>First</option>
 												<option>Economy</option>
 												<option>Business</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Passangers</span>
-											<select class="form-control" name="passangers">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-                        <option>4</option>
 											</select>
 											<span class="select-arrow"></span>
 										</div>

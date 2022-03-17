@@ -1,25 +1,18 @@
 <?php
-    if(isset($_POST['submit'])){
-        $newFlight= new ReservationsController();
-        $newFlight->add();
-        
-    }
-?>
-
-<?php
     if(isset($_POST['id'])){
         $existFlight= new flightController();
         $flight = $existFlight->getOneFlight();
-
-
-      $id = $_SESSION['id'];
-      $passengers = $_POST['passengers'];
+        $id = $_SESSION['id'];
+       $passengers = $_POST['passengers'];
     }
-  
-    // echo "number of psg : " .$passengers . '<br/>';
-
 ?>
-
+<?php
+    if(isset($_POST['submit'])){
+        $reservationobj= new flightController();
+        $reservationobj->add();
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
