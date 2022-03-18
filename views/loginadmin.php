@@ -30,7 +30,7 @@
           <form method="POST" class="form-box px-3">
             <div class="form-input">
               <span><i class="fa fa-envelope-o"></i></span>
-              <input type="text" name="email" placeholder="Email Adresse ..." tabindex="10" required>
+              <input type="text" name="fullname" placeholder="Full Name" tabindex="10" required>
             </div>
             <div class="form-input">
               <span><i class="fa fa-key"></i></span>

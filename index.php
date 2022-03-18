@@ -10,19 +10,50 @@
 
     $pages = ['home' , 'login' , 'register' , 'avaibleflights' , 'booking' , 'book' , 'reserve' , 'logout' , 'myreservation' , 'cancel', 
     'loginadmin' ,'admin', 'addflight' , 'update' , 'delete' , 'reservations', 'cancelreservation'];
-    if(isset($_GET['page'])) {
-        if(in_array($_GET['page'],$pages)) {
-            $page =  $_GET['page'];
-            $home->index($page);
+    // if(isset($_GET['page'])) {
+    //     if(in_array($_GET['page'],$pages)) {
+    //         $page =  $_GET['page'];
+    //         $home->index($page);
+    //     }
+    //     else {
+    //         include('views/includes/404.php');
+    //     }
+    // } else {
+    //     $home->index('home');
+    // }
+
+
+    if(isset($_SESSION['logged']) && $_SESSION['logged'] === true) {
+        if (isset($_GET['page'])) {
+            if (in_array($_GET['page'], $pages)) {
+                $page = $_GET['page'];
+                $home->index($page);
+            } else {
+                include('views/includes/404.php');
+            }
+        } else if ($_SESSION['user_type'] == 0) {
+            $home->index('booking');
+            
+        } else if ($_SESSION['user_type'] == 1) {
+            $home->index('admin');
+        } else {
+            $home->index('home');
         }
-        else {
-            include('views/includes/404.php');
-        }
-    } else {
-        $home->index('home');
+        // require_once './views/includes/footer.php';
+    }else if(isset($_GET['page']) && $_GET['page'] === 'register'){
+        $home->index('register');
     }
-
-
-
+    else if(isset($_GET['page']) && $_GET['page'] === 'login'){
+        $home->index('login');
+    }
+    
+    else if(isset($_GET['page']) && $_GET['page'] === 'booking'){
+        $home->index('booking');
+    }
+    
+    else{
+        $home->index('login');
+        
+    }
 ?>
     

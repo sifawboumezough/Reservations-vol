@@ -1,4 +1,8 @@
 <?php
+
+if ($_SESSION['user_type'] == 1) {
+    Redirect::to(BASE_URL);
+}
  if(isset($_POST['find'])){
     $flightobj= new flightController();
     $flights=$flightobj->adminfindFlights();

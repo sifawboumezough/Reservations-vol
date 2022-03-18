@@ -35,6 +35,10 @@
               <input type="text" name="fullname" placeholder="Full Name" tabindex="10" required>
             </div>
             <div class="form-input">
+              <span><i class="fa fa-user-o"></i></span>
+              <input type="text" name="username" placeholder="Username" tabindex="10" required>
+            </div>
+            <div class="form-input">
               <span><i class="fa fa-envelope-o"></i></span>
               <input type="email" name="mail" placeholder="Email Address" tabindex="10" required>
             </div>
@@ -50,8 +54,6 @@
               <span><i class="fa fa-user-o"></i></span>
               <input type="date" name="birthdate" placeholder="Your BirthDate" tabindex="10" required>
             </div>
-            
-
 
             <!-- <div class="mb-3">
               <div class="custom-control custom-checkbox">

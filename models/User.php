@@ -5,10 +5,10 @@ class User {
 
 
     static public function createUser($data){
-		$stmt = DB::connect()->prepare('INSERT INTO users (fullname,email_adresse,password,passporid,birthdate)
-		VALUES (:fullname,:mail,:password,:passporid,:birthdate)');
+		$stmt = DB::connect()->prepare('INSERT INTO users (fullname,username,password,passporid,birthdate)
+		VALUES (:fullname,:username,:password,:passporid,:birthdate)');
 		$stmt->bindParam(':fullname',$data['fullname']);
-        $stmt->bindParam(':mail',$data['mail']);
+        $stmt->bindParam(':username',$data['username']);
         $stmt->bindParam(':password',$data['password']);
 		$stmt->bindParam(':passporid',$data['passporid']);
 		$stmt->bindParam(':birthdate',$data['birthdate']);
@@ -42,6 +42,7 @@ class User {
             }
         }
 
+       
 
 
       static public function getId($data){

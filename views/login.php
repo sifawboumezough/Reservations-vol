@@ -6,6 +6,7 @@
  ?>
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,10 +36,10 @@
               <span><i class="fa fa-user-o"></i></span>
               <input type="text" name="fullname" placeholder="Full Name" tabindex="10" required>
             </div>
-            <div class="form-input">
-              <span><i class="fa fa-envelope-o"></i></span>
-              <input type="email" name="mail" placeholder="Email Address" tabindex="10" required>
-            </div>
+            <!-- <div class="form-input">
+              <span><i class="fa fa-user-o"></i></span>
+              <input type="text" name="username" placeholder="username" tabindex="10" required>
+            </div> -->
             <div class="form-input">
               <span><i class="fa fa-key"></i></span>
               <input type="password" name="password" placeholder="Password" required>

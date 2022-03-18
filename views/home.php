@@ -70,14 +70,6 @@
           </li> -->      
 
        </ul>
-        <form class="d-flex" action="register">
-            <ul class="nav navbar-nav navbar-right">
-                <button type="submit" class="btn btn-primary w-100 h-70 mx-auto">
-                Sign in
-                </button>
-            
-            </ul>
-        </form>
         <form class="d-flex" action="login">
             <ul class="nav navbar-nav navbar-right">
             <button type="submit" class="btn btn-primary w-100 h-70 mx-auto">
